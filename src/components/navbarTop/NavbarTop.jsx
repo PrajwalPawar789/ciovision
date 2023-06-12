@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import "./navbarTop.scss";
 import {
   MdLocationOn,
@@ -14,6 +14,12 @@ import { MdRssFeed } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 
 const NavbarTop = () => {
+
+  const[dropDown, setDropDown] = useState(false);
+  const handleDropDown = (e) => {
+      setDropDown(!dropDown);
+  };
+
   return (
     <div className="navbarTop">
       <div className="navbarContainer">
@@ -36,7 +42,7 @@ const NavbarTop = () => {
             <MdOutlinePersonOutline style={{ fontsize: "16px" }} />
             <span>Login/Register</span>
           </div>
-          <div className="item">
+          <div className="item" onClick={handleDropDown}>
             <MdOutlineLanguage style={{ fontsize: "16px" }} />
             <span>English</span>
             <RxCaretDown style={{ fontSize: "16px" }} />
@@ -48,6 +54,18 @@ const NavbarTop = () => {
             <MdRssFeed style={{ fontSize: "16px" }} />
             <FaYoutube style={{ fontSize: "16px" }} />
           </div>
+
+          {dropDown && (<ul className="dropDownMenu">
+            <li>
+              <a>English</a>
+            </li>
+            <li>
+              <a>Spanish</a>
+            </li>
+            <li>
+              <a>French</a>
+            </li>
+            </ul>)}
         </div>
       </div>
     </div>
