@@ -1,0 +1,53 @@
+.navbarTop{
+    background-color: #111;
+    height: 50px;
+
+    .navbarContainer{
+        padding: 12.5px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .right{
+        position: relative;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+    .icons{
+        color: #777;
+        position: relative;
+        display: flex;
+        gap: 15px;
+        cursor: pointer;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        color: #777;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{
+            color:white;
+        }
+
+        span{
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+    }
+
+
+
+}
