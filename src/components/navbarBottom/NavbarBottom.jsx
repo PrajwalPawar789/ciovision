@@ -1,13 +1,17 @@
-import React from 'react'
+import {React, useState} from 'react'
 import "./navbarBottom.scss";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaSearch} from "react-icons/fa";
 
 const NavbarBottom = () => {
+  const [drowpdownone, setDropdownone] = useState(false);
+  const handledropdownone = (e) => {
+      setDropdownone(!drowpdownone);
+  };
   return (
     <div className="navbarBottom">
         <div className="navbarBottomWrapper">
-            <div className="item">
+            <div className="item" onClick={handledropdownone}>
                 <span>Home</span>
                 <MdKeyboardArrowDown style={{ fontSize: "20px"}}/>
             </div>
