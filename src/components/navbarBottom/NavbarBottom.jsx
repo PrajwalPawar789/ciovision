@@ -1,19 +1,62 @@
-import {React, useState} from 'react'
+import {React, useState} from 'react';
 import "./navbarBottom.scss";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdNavigateNext } from "react-icons/md";
 import { FaSearch} from "react-icons/fa";
 
 const NavbarBottom = () => {
-  const [drowpdownone, setDropdownone] = useState(false);
+  const [dropdownone, setDropdownone] = useState(false);
   const handledropdownone = (e) => {
-      setDropdownone(!drowpdownone);
+      setDropdownone(!dropdownone);
   };
   return (
     <div className="navbarBottom">
         <div className="navbarBottomWrapper">
-            <div className="item" onClick={handledropdownone}>
+            <div className="item" onClick = {handledropdownone}>
                 <span>Home</span>
                 <MdKeyboardArrowDown style={{ fontSize: "20px"}}/>
+                { dropdownone && (
+
+                  <div className="dropdownMenu1" >
+
+                    <span>
+                      <a>Home Default</a>
+                    </span>
+                    
+                    <span className="active">
+                      <a>Home Boxed</a>
+                    </span>
+                    
+                    <span>
+                      <a>Home RTL</a>
+                    </span>
+                    
+                    <span>
+                      <a>Home RTL Boxed</a>
+                    </span>
+
+                    <span>
+                      <a>Home Version
+                        <MdNavigateNext
+                          style={{
+                            fontSize: "20px",
+                          }}
+                        />
+                      </a>
+                    </span>
+
+                    <span>
+                      <a>Menu Version
+                        <MdNavigateNext
+                          style={{
+                            fontSize: "20px",
+                          }}
+                        />
+                      </a>
+                    </span>
+
+                  </div>
+
+                )}
             </div>
             <div className="item">
                 <span>Worlds News</span>
