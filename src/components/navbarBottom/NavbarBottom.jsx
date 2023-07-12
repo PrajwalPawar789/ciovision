@@ -3,6 +3,8 @@ import "./navbarBottom.scss";
 import { MdKeyboardArrowDown, MdNavigateNext } from "react-icons/md";
 import { FaSearch} from "react-icons/fa";
 
+
+
 const NavbarBottom = () => {
   const [dropdownone, setDropdownone] = useState(false);
   const handledropdownone = (e) => {
