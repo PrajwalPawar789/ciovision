@@ -67,8 +67,6 @@ const NavbarBottom = () => {
             </div>
             <div className="item">
                 <span>Financial</span>
-
-                
             </div>
             <div className="item">
                 <span>Enterntainment</span>
